@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio - Home</title>
+  <style>
+    /* Navbar Styling */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, rgb(10, 10, 10), rgb(21, 24, 57));
+      color: white;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: transparent;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar .logo {
+      font-size: 26px;
+      font-weight: bold;
+      color: #00ff90; /* Green */
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .navbar ul li a:hover {
+      color: #00ff90;
+    }
+
+    /* Main Content */
+    .main {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      height: 90vh;
+      padding: 60px;
+    }
+
+    .main h1 {
+      font-size: 64px;
+      margin: 0;
+    }
+
+    .main a {
+      color: #d3d3d3;
+      font-size: 36px;
+      margin-top: 15px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .main a:hover {
+      color: white;
+      text-decoration: underline;
+      transform: scale(1.05);
+    }
+
+    .main p {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    .wave {
+      display: inline-block;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    @keyframes wave-animation {
+      0% { transform: rotate(0deg); }
+      15% { transform: rotate(14deg); }
+      30% { transform: rotate(-8deg); }
+      45% { transform: rotate(14deg); }
+      60% { transform: rotate(-4deg); }
+      75% { transform: rotate(10deg); }
+      100% { transform: rotate(0deg); }
+    }
+
+    .wave.waving {
+      animation: wave-animation 1s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar">
+    <div class="logo">Portfolio</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contacts.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <div class="main">
+    <h1>
+      <span class="wave" onclick="waveHand(this)">👋</span>
+      Welcome to my Portfolio
+    </h1>
+    <a href="https://www.linkedin.com/in/sravya-kandula-245955314/" target="_blank">Kandula Sravya</a>
+    <p>Feel free to explore my projects, skills, and contact me!</p>
+  </div>
+
+  <script>
+    function waveHand(el) {
+      el.classList.add("waving");
+      setTimeout(() => {
+        el.classList.remove("waving");
+      }, 1000);
+    }
+  </script>
+</body>
+</html>
