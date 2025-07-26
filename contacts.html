@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Me - Kandula Sravya</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, rgb(10, 10, 10), rgb(21, 24, 57));
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 15px 30px;
+      background-color: transparent;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar .logo {
+      font-size: 26px;
+      font-weight: bold;
+      color: #00ff90;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .navbar ul li a:hover {
+      color: #00ff90;
+    }
+
+    h1 {
+      color: #00ff90;
+      margin: 30px 0 10px;
+      font-size: 2rem;
+    }
+
+    p {
+      color: #ccc;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      max-width: 500px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      color: black;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      width: 100%;
+    }
+
+    button {
+      padding: 12px;
+      background: #00ff90;
+      color: black;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #00e681;
+    }
+
+    .social-links {
+      margin-top: 30px;
+      display: flex;
+      gap: 25px;
+      font-size: 1.1rem;
+    }
+
+    .social-links a {
+      text-decoration: none;
+      color: #00ff90;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: white;
+    }
+
+    .footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">Portfolio</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contacts.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <h1>Contact Me</h1>
+  <p>I'd love to hear from you! Fill out the form below and I'll get back to you soon.</p>
+
+  <form name="contact" method="POST" data-netlify="true">
+    <input type="text" name="name" placeholder="Your Full Name" required />
+    <input type="email" name="email" placeholder="Your Email Address" required />
+    <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+
+  <div class="social-links">
+    <a href="https://github.com/KandulaSravya" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/sravya-kandula-245955314/" target="_blank">LinkedIn</a>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Kandula Sravya | Portfolio
+  </div>
+
+</body>
+</html>
