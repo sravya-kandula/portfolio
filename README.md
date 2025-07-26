@@ -35,10 +35,3 @@ portfoliohtml/
 
 > This website does **not** collect any personal data.  
 > All pages are static and client-side only.
-
-## 📷 Screenshot
-
-Make sure this file exists: `images/home-img.jpg`
-
-```md
-![Home Screenshot](images/home-img.jpg)
